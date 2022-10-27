@@ -8,7 +8,8 @@ namespace GitHub.Runner.Sdk
         {
             return string.Equals(gitHubUrl.Host, "github.com", StringComparison.OrdinalIgnoreCase) ||
                 string.Equals(gitHubUrl.Host, "www.github.com", StringComparison.OrdinalIgnoreCase) ||
-                string.Equals(gitHubUrl.Host, "github.localhost", StringComparison.OrdinalIgnoreCase);
+                string.Equals(gitHubUrl.Host, "github.localhost", StringComparison.OrdinalIgnoreCase) ||
+                string.Equals(gitHubUrl.Host, "avocado-gmbh.github.localhost", StringComparison.OrdinalIgnoreCase);
         }
 
         public static Uri GetCredentialEmbeddedUrl(Uri baseUrl, string username, string password)
